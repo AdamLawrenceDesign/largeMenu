@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+footer {
+	position:relative
+}
+
+.input_area_select label {
+	display:none;
+}

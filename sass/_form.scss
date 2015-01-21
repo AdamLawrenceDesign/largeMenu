@@ -1,0 +1,206 @@
+/*=====================================*/ 
+/*=========== Form Elements ===========*/ 
+
+input, textarea, select, button, .asp_hack {													/* ========= global  ========= */
+	position:relative;
+	-webkit-appearance: none;
+	width:100%;
+	font-weight:300;
+	@extend .border_box;
+	padding:.5em;
+	font-size:1em;
+	cursor:pointer;
+	color:$ntl_d;
+	border:none;
+	cursor:pointer;
+	margin:0;
+	background:$off_white;
+}
+
+input.white {
+	background:#fff
+}
+
+.asp_element {cursor:pointer }														/*========= for ASP Buttons ===========*/
+	
+.input_area, .input_area_select {													/* ========= span class surrending inputs ========= */
+	position:relative;
+	border:1px solid $ntl_xl;
+	@extend .border_box;
+	@extend .round_sd;
+}
+
+	.input_area .input-icon, .input_area_select .input-icon {
+		position: absolute;
+		top: .7em;
+		right: .5em
+		}
+		
+		.error .input-icon {
+		  color: #f15755
+		  }
+		
+		.input-icon img {
+		  height: 1em
+		  }
+	
+	input:focus, textarea:focus, select:focus {											/* ========= remove Chrome Defaults ========= */
+		-webkit-box-shadow: inset 0px 0px 8px 0px rgba(130, 153, 192, 0.2);
+		-moz-box-shadow: inset    0px 0px 8px 0px rgba(130, 153, 192, 0.2);
+		box-shadow: inset     0px 0px 8px 0px rgba(130, 153, 192, 0.2);
+		outline-width:0
+	}
+	
+	select {
+		position:relative;																/* ========= select ========= */
+		text-indent: 0.01px;
+		-webkit-appearance: none; 														/*Removes default chrome and safari style*/
+		-moz-appearance: none; 															/* Removes Default Firefox style*/
+		appearance:none;
+		text-overflow: "";  															/*Removes default arrow from firefox*/ /*My custom style for fonts*/
+	}
+	
+		.input_area_select label {
+			position:absolute;
+			top:0;
+			right:0;
+			height:100%;
+			width:2.1em;
+			padding-left:.25em;
+			padding-top:.6em;
+			pointer-events:none;
+			background:#f9f9f9
+		}
+
+		label{
+			text-align:right;
+			padding-right:1em;
+		}
+
+
+	@-moz-document url-prefix() { 														/* bug fix for the latest version of firefox */
+		.input_area_select label {
+			background-image:none
+		}
+	}
+	/* ========= check ========= */ /*	
+	.check {																			
+		width: 20px;
+		position: relative;
+		display:inline-block;
+	}
+	/* ========= check label ========= */	/*
+	.check label {																		
+		cursor: pointer;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display:inline-block;
+		@extend .rounded_sd;
+		@extend .ease_sd;
+		background:#333;
+		border:1px solid $ntl_d;
+	}
+	.check label:after {
+		opacity: 0;
+		content: '';
+		position: absolute;
+		width:70%;
+		height:70%;
+		top:15%;
+		left:15%;
+		@extend .ease_sd;
+		background-image:url(../svg/tick_fff.png);
+		background-size:100% 100%;
+	}
+	.check label:hover::after {
+		opacity: 0.8;
+	}
+	.check input[type=checkbox]:checked + label:after {
+		opacity: 1;
+	}
+	*/
+	
+	.valid .input-icon {
+		color:#55acee;
+		color:#73b64a;
+	}
+	
+textarea {
+	height:12em;
+	font-size:.9em;
+	font-weight:500;
+	font-family:'Roboto', sans-serif;
+}	
+	
+	
+.button_lt, .button_dk, .button_sd, .button {															/* ========= Button buttons========= */
+	border:none;
+	color:$ntl_d;
+	text-shadow:0px 1px 1px rgba(0,0,0,.1);
+	font-weight:300;
+	span.txt_sm {
+		line-height:1
+	}
+}
+.button_dk, .button_sd, .button {
+	color:#fff;
+	background:rgb(255,187,0);
+}
+.button_dk:hover, .button_lt:hover, .button_sd:hover, .button:hover {
+	@extend .inner-shadow
+}
+
+.button_ntl, .pagnation li a {
+	color:#fff;
+	background:$ntl_l;
+	padding:.5em;
+	cursor:pointer;
+	@extend .rounded_sd;
+}
+
+.button_ntl:hover, .pagnation li a:hover, .pagnation li a.selected {
+  background:$prm_m;
+}
+
+.link_button {
+	background:#6caddf;
+	color:#fff;
+	padding:0 .75em;
+	font-weight:500;
+	cursor:pointer;
+	text-shadow:none;
+	font-weight:500;
+	font-family:'Roboto', sans-serif;
+	@extend .rounded_sd;
+	/*
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	 border-radius: 4px
+	 */
+}
+
+
+
+	/*============== usage ============== */ 				/*
+	
+	<div class="check fl_rt m_l_right">														// Check 
+		<input id="0" type="checkbox" unchecked="" />
+		<label for="0"></label>
+	</div>
+	
+	<span class="input_area_select border_ntl round_sd relative _33_s m_m_left">			// Select
+		<select>
+			<option>Year</option>
+			<option>1</option>
+			<option>2</option>
+		</select>
+		<label class="icon-arrow_full_down border_box"></label>
+	</span> 
+	
+	<label class="_50_m p_m_top p_m_bottom m_m_top">Card Holders Name:</label>
+	<span class="_50_m input_area m_m_top"><input type="text" /></span>
+	
+	*/

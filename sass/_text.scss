@@ -1,0 +1,77 @@
+
+/* ===== Text ====== */
+
+h1 {
+	font-family:"Open Sans", sans-serif;
+	margin-top:.2em;
+	line-height: 1.4;
+	font-weight:500;
+}
+	
+h2 {
+	font-family:"Open Sans", sans-serif;
+	font-weight:500; 
+	line-height: 1.7em;
+	color:$ntl_l;
+	margin: 0 0 .2em 0;
+}
+
+h3 {
+	font-family:"Open Sans", sans-serif;
+	font-weight:$font_prm_nl; /* Light */
+	line-height: 1.7em;
+	margin: .4em 0 .2em 0;
+	color:$ntl_d
+}
+
+h4 {
+	font-family:"Open Sans", sans-serif;
+	font-weight:$font_prm_lt; /* Light */
+	color:$ntl_l;
+	line-height: 1.2em;
+	margin:.5em 0
+}
+
+p {
+	font-weight:$font_prm_nl;   /* Normal */
+	font-size: 1em;
+	line-height: 1.62em;
+	margin:.6em 0;
+	text-align:inherit;
+}
+
+blockquote p {
+	font-weight:$font_prm_nl; /* Bold */
+	font-style:italic;
+	font-size:1em;
+	line-height: 1.62em;
+	margin: .6em 0;
+	border-left: 4px solid $prm_d;
+	margin-left:4px;
+	margin:1em 0;
+	padding: .5em 2em;
+	@extend .border_box;
+}
+
+.txt_sm {font-size:.9em}
+.txt_xs {font-size:.7em}
+.txt_lg {font-size:2em}
+.txt_xl {font-size:3em}
+
+.txt_prm_l {color:$prm_l !important}		/* ==== text colours ==== */
+.txt_prm_m {color:$prm_m !important}
+.txt_prm_d {color:$prm_d !important}
+.txt_red {color:red !important}
+.txt_sec_m {color:$sec_m !important}
+.txt_ntl_m {color:$ntl_m !important}
+.txt_fff {color:#fff !important}
+
+.txt_shadow_dk { text-shadow: 0px 1px 3px #000}
+/* .txt_shadow_lt, .txt_shadow_lt h1, .txt_shadow_lt h2, .txt_shadow_lt p { text-shadow: 0px 1px 3px #fff} */
+
+.txt-emboss {																		/* ==== txt emboss ==== */
+    text-shadow:rgba(255,255,255,.5) 1px 1px 0;
+}
+.txt-emboss_d {
+    text-shadow:$ntl_m 1px 1px 0;
+}

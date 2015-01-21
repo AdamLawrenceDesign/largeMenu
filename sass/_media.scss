@@ -1,0 +1,337 @@
+
+/* ======== Classes ========= */
+
+.p_m {padding:.5em;}
+.p_m_top {padding-top:.5em}
+.p_m_right {padding-right:.5em}
+.p_m_bottom {padding-bottom:.5em}
+.p_m_left {padding-left:.5em}
+.p_l {padding:1em;}
+.p_l_top {padding-top:1em}
+.p_l_right {padding-right:1em}
+.p_l_bottom {padding-bottom:1em}
+.p_l_left {padding-left:1em}
+.p_xl {padding:2em}
+
+.m_s_top {margin-top:.25em}
+.m_m {margin:.5em}
+.m_m_top {margin-top:.5em}
+.m_m_right {margin-right:.5em}
+.m_m_bottom {margin-bottom:.5em}
+.m_m_left {margin-left:.5em}
+.m_l {margin:1em}
+.m_l_top {margin-top:1em}
+.m_l_right {margin-right:1em}
+.m_l_bottom {margin-bottom:1em}
+.m_l_left {margin-left:1em}
+
+._10_s, ._10_m, ._10_l, ._20_s, ._20_m, ._20_l, ._25_s, ._25_m, ._25_l,
+._30_s, ._30_m, ._30_l, ._33_s, ._33_m, ._33_l,
+._40_s, ._40_m, ._40_l, ._50_s, ._50_m, ._50_l,
+._60_s, ._60_m, ._60_l, ._66_s, ._66_m, ._66_l,
+._70_s, ._70_m, ._70_l, ._75_s, ._75_m, ._75_l,
+._80_s, ._80_m, ._80_l, ._90_s, ._90_m, ._90_l {
+	display: inline-block;
+	float: left;
+	@extend .border_box
+}
+
+._10_s 	{ width:10% } 
+._20_s 	{ width:20% }
+._25_s 	{ width:25% }
+._30_s 	{ width:30% }
+._33_s 	{ width:33% }
+._40_s 	{ width:40% }
+._50_s 	{ width:50% }
+._60_s 	{ width:60% }
+._66_s 	{ width:66% }
+._70_s 	{ width:70% }
+._75_s 	{ width:75% }
+._80_s 	{ width:80% }
+._90_s 	{ width:90% }
+._100 {width:100%}
+
+/* ======================== */
+/* ==== Media Queries ===== */
+
+#testing_phone, #testing_tablet, #testing_desktop, #testing_desktop_lg {
+	background:red;
+	@extend .round_sd_right;
+	color:#fff;
+	position:fixed;
+	padding:1em;
+	left:0;
+	bottom:3em;
+	display:none;
+}
+
+#testing_tablet {background:green}
+#testing_desktop {background:blue}
+#testing_desktop_lg {background:#39C}
+
+section {																		/* ========= wrapper ========= */
+	position:relative;
+	margin: 0 auto;
+	text-align: left;
+}		
+
+header {	
+	position:relative;
+	@extend .border_box;																		/* ========= header  ========= */
+	background:$prm_d;
+	text-align:center!important;
+	width:100%;
+	z-index:110;
+	padding:.5em
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {  body { font-size:1.16em } b{font-weight:500}  }    /* Chrome- and Safari-specific CSS here*/ /* Fix Font Size's Issues in Chrome */
+@media screen\0 { 										body { font-size:.92em } 	} 	 /* IE  - specific CSS here*/
+
+/* Break Points & Column Resizing */
+@media only screen and (min-width : 20em) {						/* ===== 20em (320px) Red ====== */
+																#testing_phone {display:block}
+	header {
+		font-size:.8em;
+		padding:.75em;
+		#header_logo { height:1.8em};
+		.cart { display:block};
+		[class^="icon-"] {font-size:1.8em};
+		.icon-unlocked {font-size:1.6em;padding-bottom:.2em}
+	}
+	
+	#top_top {display:block}
+	
+	.phone_view {display:block}
+	.phone_max {width:100%;margin-top:.5em}
+	.desktop_view, .tablet_view { display:none}
+	
+	h1 { font-size:1.4em }
+	h2 { font-size: 1.2em}
+	h3 { font-size: 1.18em }
+	h4 { font-size: 1.08em }
+	
+	section, ._10_m, ._10_l, ._20_m, ._20_l, ._25_m, ._30_m, ._25_l, ._30_l, ._33_m, ._33_l, ._40_m,._40_l, ._50_m, ._50_l,._60_m, ._60_l,._66_m,._66_l,._70_m, ._70_l, ._75_m, ._75_l, ._80_m, ._80_l, ._90_m, ._90_l {
+		width:100%	}
+		
+		section {																		/* ========= wrapper ========= */
+			width: auto;
+			margin: 0 auto;
+			padding: 0 .2em;
+		}	
+			
+			#group_images {
+				text-align:center	}
+				
+				#group_images li {
+					margin-bottom:1em}
+			
+			#image_list {
+				padding:1em }
+				
+			.product_wrapper_25 {
+				width:48%;
+				font-size:.7em;
+			}
+			.p_l_left_break {padding-left:0}
+			
+			#menu_widget {display:none}
+			
+			#portrait_images li   {
+				width:48%;
+				margin-right:2%;
+			}
+				#portrait_images li:nth-child(2n){
+					margin-right:0
+				}
+				
+				#groups_display { font-size:.7em }
+				
+		/* Form */		
+    	label { text-align:left }
+		
+		#menu_help_lg, #menu_lg, menu, #menu_preview, #additional_content {
+			top:2.6em;
+		}
+		ul.inline li a {padding-right:.5em}
+				
+}
+
+@media only screen and (min-width : 48em) {						/* ======= 48em (768px) Green ======= */
+																#testing_phone {	display:none	}
+																#testing_tablet {	display:block	}
+	header { font-size:1em }
+	
+	.phone_view {display:none }
+	.tablet_hide {	display:none	}
+	.tablet_view {	display:block	}
+	.desktop_view {display:none}
+	.phone_max {width:auto;margin-top:0}
+	
+	h1 {
+		font-size:2.2em;
+		margin-top:.2em;
+		line-height: 1.4 }
+		
+	h2 {
+		font-size: 1.68em;
+		line-height: 1.7em;
+		margin: 0 0 .2em 0 }
+	
+	h3 {
+		font-size: 1.38em;
+		line-height: 1.7em;
+		margin: .4em 0 .2em 0 }
+	
+	h4 {
+		font-size: 1.18em;
+		line-height: 1.2em;
+		margin:.5em 0 }
+		
+		#image_list {
+			padding:1em }
+			
+			.product_wrapper_25 {
+				width:48%;
+				font-size:.9em }
+			.product_wrapper_25 {width:23%}
+			.product_wrapper_33 {width:31%}
+			
+			.add_wrapper:hover {
+				.add {
+					right:0}
+			}
+	
+		.product_wrapper_25:hover, .product_wrapper_33:hover {
+			-webkit-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, $shadow);		
+			-moz-box-shadow:    0px 1px 5px 0px rgba(50, 50, 50, $shadow);
+			box-shadow:         0px 1px 5px 0px rgba(50, 50, 50, $shadow);
+			.add {
+				right:0
+			}
+		}
+		.p_l_left_break {padding-left:0}
+		.p_l_right_break {padding-left:0}
+		
+		#menu_widget {display:none}
+		
+		#portrait_images li   {
+			width:15.8%;
+			margin-right:4.8%;
+		}
+			#portrait_images li:nth-child(5n){
+				margin-right:0;
+			}
+			#portrait_images li:nth-child(2n){
+				margin-right:4.8%;			/*margin-right:2%;*/
+			}
+				
+			#groups_display { font-size:1em }
+			
+		#menu_help_lg, #menu_lg, menu, #menu_preview, #additional_content {
+			top:3.2em
+		}
+		ul.inline li a {padding-right:1.4em}
+}
+
+@media only screen and (min-width : 56.25em) {					/* ====== 56.25em (900px) dark blue ======= */
+																#testing_tablet {		display:none	}
+																#testing_desktop {		display:block	}
+	#document {padding-top:1em}
+	header a, header img {font-size:1.2em}
+	nav {font-size:.9em;display:block !important}	
+		.desktop_view {display:block}
+		.tablet_hide {display:block}
+		._10_m, ._10_l 	{ width:10%}																/* Columns */
+		._20_m, ._20_l 	{ width:20%}
+		._25_m, ._25_l 	{ width:25%}
+		._30_m, ._30_l 	{ width:30%}
+		._33_m, ._33_l 	{ width:33%}
+		._40_m, ._40_l 	{ width:40%}
+		._50_m, ._50_l 	{ width:50%}
+		._60_m, ._60_l 	{ width:60%}
+		._66_m, ._66_l 	{ width:66%}
+		._70_m, ._70_l 	{ width:70%}
+		._75_m, ._75_l 	{ width:75%}
+		._80_m, ._80_l 	{ width:80%}
+		._90_m, ._90_l 	{ width:90%}
+		.p_l_left_break {padding-left:1em !important}
+		.p_l_right_break {padding-right:1em !important}
+		
+		.group_preview {border-left:1px solid #d0d2d9 !important}
+		
+		#menu_widget {display:none}
+		
+		.group_wrapper {
+			padding:0 !important;
+			/*font-size:.9em*/
+		}
+		/*
+		#page {
+			padding:1em;
+			font-size:.9em
+		}*/
+		
+		.border-right {border-right:1px solid $ntl_xl}
+		.border-left {border-left:1px solid $ntl_xl}
+				
+		nav {
+			background:$ntl_xl;															/* ========= nav ========= */
+			background:#fff !important;																/* ========= nav ========= */
+			-webkit-box-shadow: 0px 0px 6px 0px rgba(50, 50, 50, 0.75);
+			-moz-box-shadow:    0px 0px 6px 0px rgba(50, 50, 50, 0.75);
+			box-shadow:         0px 0px 6px 0px rgba(50, 50, 50, 0.75);
+			height: 3.8em;
+			font-size:.9em;
+			/*@extend .txt-emboss;*/
+			ul li:hover {
+				color:$ntl_l;
+			}
+			ul li a {
+				height: 3.8em;
+				line-height: 3.2 !important;
+			}  
+		}
+			
+			.nav_selected {
+				color:#fff !important;
+				font-weight:$font_prm_sd;
+				text-shadow:$ntl_m 1px 1px 0;
+				background:$ntl_l !important;
+				& :after { 
+					top: 100%;
+					left: 50%;
+					border: solid transparent;
+					content: " ";
+					height: 0;
+					width: 0;
+					position: absolute;
+					pointer-events: none;
+					border-top-color:$ntl_l; 
+					border-width: 12px;
+					margin-left: -12px; 
+				} 
+			}
+		/* Form */		
+    	label{
+			text-align:right;
+			padding-right:1em}
+		
+}
+
+@media only screen and (min-width : 68.75em) {					/* ======== 68.75em (1100px) light blue ======== */
+																#testing_desktop {		display:none	}
+																#testing_desktop_lg {		display:block }
+	header a, header img {font-size:1.2em}
+	nav {font-size:1em}
+	section { 																					/* Wrapper  */
+		width:67.75em!important;
+		padding: 0 
+	}
+	/*
+	#page {
+		font-size:1em;
+		padding:1em 0 0 0;
+	}*/
+	
+}

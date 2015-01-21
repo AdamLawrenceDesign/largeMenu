@@ -1,0 +1,203 @@
+/* ==== List patterns begin ===== */
+
+ul {																					/* ========= remove styles and padding ========= */
+	list-style:none;
+	padding:0
+}
+	ul li {																					/* ========= add padding ========= */
+		padding:.5em
+	}
+	
+	ul.links li, ul.inline li {											/* ========= remove padding if inline ========= */									
+		padding:0;
+		@extend .border_box;
+	}
+	
+	ul.inline li {																			/* ========= all inline defaulted to left ========= */	
+		float:left;																			/* ========= float left | inline relative ========= */
+		display:inline-block;
+		@extend .border_box;
+		position:relative
+	}
+	
+	ul.links li a, ul.no_links li {														/* ========= links set lenght to 100% ========= */
+		position:relative;
+		margin:0;
+		display:block;
+		width:100%;
+		border-bottom:1px solid $ntl_xl;
+		padding:1em;
+		@extend .border_box;
+	}
+	
+	ul.no_indent li a {
+		padding-left:0!important
+	}
+	
+	ul.inline li a {																		/* ========= links set auto width  ========= */				
+		float:left;																			/* ========= this may only apply to dash links  ========= */	
+		display:inline-block;																/* ========= creating padding  ========= */
+		padding:.3em 1.4em;
+		line-height:1.6;
+		z-index:10;
+		position:relative
+	}
+	
+		.rollover {
+			position:absolute;
+			width:100%;
+			height:100%;
+			left:100%;
+			top:0;
+			padding:1em;
+			line-height:1.6;
+			background:$sec_m;
+			color:#fff;
+			@extend .ease_fast;
+			@extend .border_box;
+		}
+
+		.links li a.selected_right { border-right:5px solid $prm_m }																	/* ========== list animations  ========== */
+		.links li a.selected_left { border-left:5px solid $sec_m }
+		
+		.links_color li a:hover{
+			.rollover {
+				left:0;
+			}
+		}
+		
+		.links_line_right li a:hover{
+			@extend .ease_fast;
+			border-right:5px solid $prm_m
+		}
+		.links_line_left li a:hover{		/* .links_line_left li a:hover, */
+			@extend .ease_fast;
+			border-left:5px solid $sec_m
+		}
+		
+		.links_line_bottom li a.selected { border-bottom:5px solid $prm_m }															/* ========== links bottom ========== */
+		
+		.links_line_bottom li a { transition: border-bottom 0.5s }
+		
+		.links_line_bottom li a:hover {
+			@extend .ease_fast;
+			border-style:inset;
+			border-bottom:5px solid $prm_m;
+			padding-bottom:1px;
+		}
+
+/* ==== List parts begin ===== */
+
+#image_list {padding:1em 2em 1em 0 }
+
+ul.justify {text-align:justify}																	/* ==== justify list ===== */
+
+	.justify li {
+		padding:0;
+		display:inline-block;
+		text-align:center;
+		@extend .ease_fast;
+	}
+	
+	.justify li:hover, #portrait_images li:hover, #group_images li:hover {
+		-moz-transform: scale(1.04);
+		-o-transform: scale(1.04);
+		-webkit-transform: scale(1.04);
+		transform: scale(1.04);
+	}
+	
+	.stretch {
+		display:inline-block;
+		width:100%;
+		*display:inline;
+		zoom:1
+	}
+
+	#portrait_images li, #group_images li  {
+		@extend .ease_sd;
+		padding:0;
+		display:inline;
+		position:relative;
+		float:left;
+		/*margin-bottom:1em;*/
+		text-align:center;
+		img {
+			cursor:pointer;
+			width:100%;
+		}
+	}
+		.overlay {
+			position:absolute;
+			top:.2em;
+			left:.2em;
+		}
+
+		#group_images li {
+			width:31%;
+			margin-right:3%;
+		}
+			
+			#group_images li:nth-child(3n){ /* ,6n, 9n,12n,15n,18n,21n,24n,27n,30n */
+				margin-right:0;
+			}
+		
+			#group_images li img{
+				width:100%
+			}
+
+ul.products {
+	text-align:justify;
+	font-family:"Open Sans", sans-serif;
+	padding:0;
+	height:auto;
+	li {
+		padding:0;												/* Remove default behaviour created */
+		display: inline;										/*make text-align property applicable*/
+		margin-bottom:2em;
+	}
+	.stretch {
+    display: inline-block;
+    width: 100%;
+    *display: inline;											/* if you need IE6/7 support */
+    zoom: 1
+	}
+	h4 {
+		line-height:.5;
+	}
+}
+
+	ul.products:after/*, .force-justify*/ {							/*force text-align:justify; behaviour that requires text to be at least over 2 lines*/
+		content:"";													/*IMO using :after is a neater approach, but you have an alternative of using an extra element*/
+		display: inline-block;
+		position: relative;
+		width: 100%;
+		height: 0;
+	}
+
+.product_wrapper_25, .product_wrapper_33 {						/* slide side widgets diet items can be reduced */
+	position:relative;
+	display: inline-block;
+	height:auto;
+	margin-bottom:1em;
+	@extend .border_box;
+	@extend .ease_sd;
+	overflow:hidden;
+	.add {
+		@extend .ease_sd;
+		@extend .ease_slide;
+		pointer-events:none;
+		position:absolute;
+		background-size:100%;
+		display:block;
+		right:0;
+		top:1em;
+		padding:.5em;
+		right:-5em;
+	}
+	img{
+		width:100%
+	}
+	.overlay {
+		width:80px;
+	}
+}

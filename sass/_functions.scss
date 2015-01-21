@@ -1,0 +1,55 @@
+.ease_sd {
+	 -webkit-transition: all $ease_sd ease-in-out;
+	-moz-transition: all $ease_sd ease-in-out;
+	-o-transition: all $ease_sd ease-in-out;
+	transition: all $ease_sd ease-in-out;
+}
+
+.ease_fast {
+	 -webkit-transition: all $ease_fast ease-in-out;
+	-moz-transition: all $ease_fast ease-in-out;
+	-o-transition: all $ease_fast ease-in-out;
+	transition: all $ease_fast ease-in-out;
+}
+
+.ease_slide {
+	-webkit-animation: slide 0.5s forwards;
+	-webkit-animation-delay: 2s;
+	animation: slide 0.5s forwards;
+	animation-delay: 2s;
+}
+
+.linear {
+	-webkit-transition: all 1000ms linear;
+    -moz-transition: all 1000ms linear;
+    -ms-transition: all 1000ms linear;
+    -o-transition: all 1000ms linear;
+    transition: all 1000ms linear;
+}
+
+.scale_hide {
+	-webkit-border-radius: 25%;
+	-moz-border-radius:25%;
+	border-radius:25%;
+    -moz-opacity: 0;
+    opacity: 0;
+    -moz-transform: scale(0.01);
+    -webkit-transform: scale(0.01);
+    -o-transform: scale(0.01);
+    -ms-transform: scale(0.01);
+    transform: scale(0.01);
+}
+
+.inactive {																			/* ==== void section ==== */
+	opacity:0.5;
+	pointer-events:none;
+}
+
+.no-event {pointer-events:none}
+
+
+.hidden {display:none!important}
+.invisible {visibility:hidden!important}
+.inactive, .opacity_0 {	pointer-events:none}															/* inactive hide*/
+.opacity_0 {opacity:0!important}
+.opacity_fff_9 {background:rgba(255,255,255,.9)}

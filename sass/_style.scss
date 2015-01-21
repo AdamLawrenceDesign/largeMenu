@@ -1,0 +1,189 @@
+
+/* ==== img style ==== */
+
+img.sm {height:2em}
+img.border_fff {padding:.2em;border:1px solid #fff}
+img.border_ntl {padding:.2em;border:1px solid $ntl_xl}
+img.border {border:1px solid $ntl_xl}
+
+/* ======== Style Patterns ======== */
+
+.box-shadow {																		/* ==== shadow remove later ==== */
+	-webkit-box-shadow: 0px 0px 6px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 6px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 6px 0px rgba(50, 50, 50, 0.75);
+}
+.inner-shadow {
+	-webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.28);
+	-moz-box-shadow:    inset 0px 0px 10px 0px rgba(0, 0, 0, 0.28);
+	box-shadow:         inset 0px 0px 10px 0px rgba(0, 0, 0, 0.28);
+}
+.inner-shadow-lt {
+	-webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:    inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+	box-shadow:         inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.shadow_left {background-image:linear-gradient(to right, #F6F6F6 0%, #FFFFFF 8px)!important}	/* ==== only works on white background ==== */
+.shadow_right {background-image:linear-gradient(to left, #F6F6F6 0%, #FFFFFF 8px)!important}
+
+.round_sd, .round_sd_right, .round-sd_left, .rounded_sd {	
+	display:block;
+	overflow:hidden;																		/* ==== rounded ==== */
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.round_sd_right {
+	display:block;
+	overflow:hidden;																		/* ==== rounded ==== */
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius:0 4px 4px 0;
+}
+.round_sd_left {
+	display:block;
+	overflow:hidden;																		/* ==== rounded ==== */
+	-webkit-border-radius: 4px 0 0 4px;
+	-moz-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px;
+}
+
+.round_sd_bottom {
+	display:block;
+	overflow:hidden;																		/* ==== rounded ==== */
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+}
+
+.square {
+	-webkit-border-radius:0!important;
+	-moz-border-radius:0!important;
+	border-radius:0!important;
+}
+.block_yellow {display:block;background:$yellow_l;border:1px solid $yellow_m;color:$yellow_d}		/* ========== blocks ========= */
+
+.block_prm {display:block;background:$prm_l;border:1px solid $prm_m;color:$prm_d}
+.block_red {display:block;background:$red_l;border:1px solid $red_m;color:$red_m;}
+.block_green {display:block;background:$sec_l;border:1px solid $sec_m;color:$sec_m;}
+.block_ntl {display:block;background:$ntl_xl;border:1px solid darken($ntl_xl,.2);color:$ntl_d}		/* @extend .txt_emboss */
+	.block_ntl h3, .block_ntl p {margin:.25em 0;line-height:1}
+	.block_ntl p {margin:.75em 0}
+	.block_ntl .inline_block {margin-top:.35em}
+	.block_ntl .button {padding:.5em .75em;text-shadow:0px 1px 1px rgba(0,0,0,.1)}
+
+.block_sec {display:block;background:$sec_l;border:1px solid darken($sec_l, 5%);color:darken($ntl_d,30%)}
+.block_white {display:block;background:#fff}
+
+.border_ntl {border:1px solid darken($ntl_xl,10%)}
+
+.bg_sec {background:$sec_m}															/* ========= Backgrounds  ========= */
+.bg_prm_m {background:$prm_m}
+.bg_fa {background:#fafafa;@extend .txt-emboss;}
+.bg_fff {background:#fff}
+.bg_prm_d {background:$prm_d}
+.bg_ntl_l {background:$ntl_xl}
+.bg_ntl_m {background:$ntl_m}
+.bg_transparent {background:rgba(255,255,255,.75)}
+
+/* /* ========= gradient mixin  ========= *//* remove *//* Old browsers */ /* FF3.6+ *//* Chrome,Safari4+ *//* Chrome10+,Safari5.1+ *//* Opera 11.10+ */ /* W3C */ /*
+@mixin gradient($top, $bottom) {													 
+	background: lighten($bottom,8%);													 
+	background: -moz-linear-gradient(top, $top 0%, $bottom 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $bottom ), color-stop(100%, $top)); 
+	background: -webkit-linear-gradient(top, $bottom 0%, $top 100%); 
+	background: -o-linear-gradient(top, $top 0%, $bottom 100%); 
+	background: linear-gradient(to bottom, $top 0%, $bottom 100%);
+} */
+
+.underline_solid {border-top:1px solid $ntl_xl;width:100%;content:" "}			/* ========= underlines ========= */
+.underline_solid_gy {border-top:1px solid $ntl_m;width:100%;content:" "}			/* ========= underlines ========= */
+.underline_dotted {border-top:1px dotted $ntl_m;width:100%;content:" "}				
+
+/* ================ border-left and right on media page ===================== */
+
+.underline_arrow { 
+	position: relative;
+	height:0;
+	background: #fff;
+	border-bottom: 1px solid darken($ntl_xl,2%);
+} 
+	.underline_arrow:after, .underline_arrow:before { 
+		top: 100%;
+		left: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+	} 
+	.underline_arrow:after { 
+		border-top-color: #fff;
+		border-width: 11px;
+		margin-left: -11px
+	} .underline_arrow:before {
+		border-top-color: darken($ntl_xl,2%);
+		border-width: 13px;
+		margin-left: -13px
+	}
+
+	.pattern:before, .pattern_sports:before {
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		content:" ";
+		background:url(../img/bg_overlay.png);
+		background-size:14em;
+		opacity:.3;
+		pointer-events:none
+	}
+	
+	.pattern_sports:before {
+		background: url("../img/sports/bg_overlay.png") repeat scroll 0 0 / 14em auto rgba(0, 0, 0, 0);
+		position: absolute;
+		top: 0 }
+	
+	.border_ntl_xl_right {
+		border-right:1px solid $ntl_xl;
+	}
+		
+	/* ================================ */														/* menu gradient */
+	/*
+	.sunken-menu:before {
+    background-color: transparent;
+    background-image: linear-gradient(#fff, rgba(255, 255, 255, 0));
+    top: 0;
+	}
+	.sunken-menu:before, .sunken-menu:after {
+		background-color: transparent;
+		content: "";
+		height: 15px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+	}
+	.sunken-menu:after {
+		background-color: transparent;
+		background-image: linear-gradient(rgba(255, 255, 255, 0), #fff);
+		bottom: 0;
+	}
+	
+	.sunken-menu:before, .sunken-menu:after {
+		background-color: transparent;
+		content: "";
+		height: 15px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+	}
+	.sunken-menu {
+		background-image: linear-gradient(to right, #f6f6f6 0%, #fff 8px);
+		box-shadow: 1px 0 0 #eee inset;
+		padding-bottom: 15px;
+		padding-top: 15px;
+		position: relative;
+	}
+	*/

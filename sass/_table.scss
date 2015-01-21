@@ -1,0 +1,18 @@
+
+/* === List patterns end ===== */
+
+.table {width:100%;height:100%;display:table;text-align:center}							/* ========= cover and center object ========= */
+.table_cell {display:table-cell;vertical-align:middle}
+
+table {																					/* ========= table remove defaults apply small text ========= */
+	border-style:None;
+	border-collapse:collapse;
+	width:100%;
+	font-size:.8em;
+}
+tr, th, td {
+    /*border: 1px solid #DDDDDD;*/
+    box-sizing: border_box;
+    padding: 0.5em;
+    text-align: center;
+}
